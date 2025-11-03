@@ -1,0 +1,137 @@
+.section {
+  padding: var(--space-24) 0 var(--space-16);
+  background: var(--color-white);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.ctaCard {
+  position: relative;
+  background: var(--color-background);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-20) var(--space-8);
+  text-align: center;
+  overflow: hidden;
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pastel-mint);
+  color: var(--color-primary);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin-bottom: var(--space-6);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-full);
+  padding: 6px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.emailInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--color-neutral-900);
+  outline: none;
+}
+
+.emailInput::placeholder {
+  color: var(--color-neutral-400);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s var(--ease-out);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: var(--color-accent-hover);
+  transform: scale(1.02);
+}
+
+.btnIcon {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.btn:hover .btnIcon {
+  transform: translateX(4px);
+}
+
+.disclaimer {
+  margin-top: var(--space-4);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .ctaCard {
+    padding: var(--space-12) var(--space-6);
+    border-radius: var(--radius-2xl);
+  }
+}

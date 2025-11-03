@@ -1,0 +1,101 @@
+.section {
+  padding: var(--space-24) 0;
+  background: var(--color-neutral-50);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  background: var(--color-primary-alpha);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-3);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-neutral-500);
+}
+
+.faqGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.faqItem {
+  background: var(--color-white);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all 0.25s var(--ease-out);
+}
+
+.faqItemOpen {
+  border-color: var(--color-primary-alpha-20);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.06);
+}
+
+.questionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-6);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  gap: var(--space-4);
+}
+
+.questionBtn:hover .question { color: var(--color-primary); }
+
+.question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+  transition: color 0.2s var(--ease-out);
+}
+
+.chevron {
+  color: var(--color-neutral-400);
+  transition: transform 0.3s var(--ease-out), color 0.2s;
+  flex-shrink: 0;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.answerWrapper { overflow: hidden; }
+
+.answer {
+  padding: 0 var(--space-6) var(--space-5);
+  color: var(--color-neutral-500);
+  line-height: 1.7;
+  font-size: 0.925rem;
+}

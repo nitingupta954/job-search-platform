@@ -1,0 +1,128 @@
+.section {
+  padding: var(--space-24) 0;
+  background: var(--color-neutral-50);
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  background: var(--color-primary-alpha);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-3);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-neutral-500);
+}
+
+.stepsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  gap: var(--space-8);
+}
+
+.connectorLine {
+  position: absolute;
+  top: 72px;
+  left: 15%;
+  right: 15%;
+  height: 3px;
+  background: linear-gradient(90deg, #4F46E5, #8B5CF6, #EC4899);
+  border-radius: var(--radius-full);
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNumber {
+  font-family: var(--font-family-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-3);
+  opacity: 0.6;
+}
+
+.iconWrapper {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  margin-bottom: var(--space-6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s var(--ease-out);
+}
+
+.step:hover .iconWrapper {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.stepTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin-bottom: var(--space-3);
+}
+
+.stepDescription {
+  color: var(--color-neutral-500);
+  line-height: 1.65;
+  font-size: 0.925rem;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .stepsWrapper {
+    flex-direction: column;
+    gap: var(--space-10);
+    align-items: center;
+  }
+  .connectorLine {
+    top: 15%;
+    bottom: 15%;
+    left: 50%;
+    right: auto;
+    width: 3px;
+    height: auto;
+    background: linear-gradient(180deg, #4F46E5, #8B5CF6, #EC4899);
+  }
+  .stepDescription { max-width: 360px; }
+}

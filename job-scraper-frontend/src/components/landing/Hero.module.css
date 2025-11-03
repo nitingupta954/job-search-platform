@@ -1,0 +1,381 @@
+.hero {
+  position: relative;
+  margin-top: -68px;
+  padding: calc(8rem + 68px) 0 5rem;
+  background: var(--color-background);
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--pastel-mint);
+  color: var(--color-primary);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sparkle {
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1.05;
+  margin-bottom: var(--space-6);
+  max-width: 900px;
+  letter-spacing: -0.035em;
+}
+
+.highlight {
+  color: var(--color-primary-light);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--color-neutral-600);
+  max-width: 640px;
+  margin-bottom: var(--space-10);
+  line-height: 1.7;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.primaryCta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryCta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-accent-hover);
+}
+
+.secondaryCta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: transparent;
+  color: var(--color-primary);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border: 1px solid var(--color-primary-alpha-20);
+  transition: all 0.3s var(--ease-out);
+}
+
+.secondaryCta:hover {
+  background: var(--color-primary-alpha);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* ── Trust Bar ── */
+.trustBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+  padding: 12px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+}
+
+.trustItem strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.trustIcon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.trustDivider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-neutral-200);
+}
+
+/* ── Mockup ── */
+.imageWrapper {
+  width: 100%;
+  max-width: 1000px;
+  position: relative;
+}
+
+.mockupContainer {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  transform: perspective(1200px) rotateX(4deg) scale(0.98);
+  transition: transform 0.6s var(--ease-out);
+}
+
+.mockupContainer:hover {
+  transform: perspective(1200px) rotateX(0deg) scale(1);
+}
+
+.mockupHeader {
+  height: 44px;
+  background: var(--color-neutral-50);
+  border-bottom: 1px solid var(--color-neutral-200);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-4);
+  position: relative;
+  justify-content: center;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  left: var(--space-4);
+}
+
+.dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+}
+.dot:nth-child(1) { background: #FF5F56; }
+.dot:nth-child(2) { background: #FFBD2E; }
+.dot:nth-child(3) { background: #27C93F; }
+
+.mockupUrl {
+  font-size: 0.7rem;
+  color: var(--color-neutral-500);
+  background: var(--color-white);
+  padding: 4px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.mockupBody {
+  display: flex;
+  flex: 1;
+  background: var(--color-background);
+}
+
+.mockupSidebar {
+  width: 190px;
+  background: var(--color-white);
+  border-right: 1px solid var(--color-neutral-200);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.mockupMain {
+  flex: 1;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.mockupStatsRow {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.mockupStatCard {
+  flex: 1;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-neutral-200);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.statIcon {
+  color: var(--color-primary);
+  background: var(--pastel-blue);
+  padding: 8px;
+  border-radius: var(--radius-md);
+  width: 36px; height: 36px;
+}
+
+.statIconGreen {
+  color: var(--color-primary);
+  background: var(--pastel-mint);
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--color-neutral-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.mockupGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.sidebarItem, .sidebarItemActive {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-neutral-600);
+}
+
+.sidebarItemActive {
+  background: var(--color-primary-alpha);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.mockupJobCard {
+  background: var(--pastel-blue);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: var(--space-3);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  transition: all 0.25s var(--ease-out);
+}
+
+.mockupJobCard:nth-child(2) { background: var(--pastel-mint); }
+.mockupJobCard:nth-child(3) { background: var(--pastel-pink); }
+.mockupJobCard:nth-child(4) { background: var(--pastel-peach); }
+
+.mockupJobCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.jobLogoBadge {
+  width: 36px; height: 36px;
+  border-radius: var(--radius-md);
+  color: white;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.jobContent { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+
+.jobHeader { display: flex; justify-content: space-between; align-items: flex-start; }
+
+.jobTitle {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+.jobMatch {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-white);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.jobCompany {
+  font-size: 0.75rem;
+  color: var(--color-neutral-600);
+}
+
+.jobMeta {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: 2px;
+  flex-wrap: wrap;
+}
+
+.metaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.65rem;
+  color: var(--color-neutral-600);
+  background: rgba(255,255,255,0.5);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero { padding: 5rem 0 3rem; }
+  .ctaGroup { flex-direction: column; width: 100%; max-width: 320px; }
+  .primaryCta, .secondaryCta { justify-content: center; }
+  .trustBar { flex-direction: column; gap: var(--space-3); border-radius: var(--radius-xl); }
+  .trustDivider { width: 60%; height: 1px; }
+  .mockupContainer { transform: none; min-height: auto; }
+  .mockupSidebar { display: none; }
+  .mockupGrid { grid-template-columns: 1fr; }
+}

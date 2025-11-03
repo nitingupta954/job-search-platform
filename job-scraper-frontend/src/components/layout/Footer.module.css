@@ -1,0 +1,196 @@
+.footer {
+  background: var(--color-neutral-950);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: auto;
+}
+
+.footer ::selection {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+/* ── Newsletter ── */
+.newsletterRow {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.newsletterContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.newsletterTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.newsletterSubtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.emailInput {
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: none;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  color: var(--color-white);
+  font-size: 0.9rem;
+  width: 260px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.emailInput::placeholder { color: rgba(255, 255, 255, 0.35); }
+.emailInput:focus { border-color: var(--color-primary-light); }
+
+.subscribeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 20px;
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  border: none;
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+
+.subscribeBtn:hover { background: var(--color-neutral-200); }
+
+/* ── Grid ── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-6) var(--space-8);
+}
+
+.gridSection {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.brandColumn { display: flex; flex-direction: column; gap: var(--space-4); }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.logo:hover { transform: scale(1.02); }
+
+.logoIconWrapper {
+  width: 28px; height: 28px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.logoText {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+.brandDescription {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 280px;
+}
+
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.columnTitle {
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.875rem;
+  transition: color 0.2s var(--ease-out);
+}
+
+.link:hover { color: rgba(255, 255, 255, 0.85); }
+
+/* ── Bottom Bar ── */
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.madeWith {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .newsletterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-8) var(--space-4);
+  }
+  .newsletterForm { width: 100%; }
+  .emailInput { width: 100%; flex: 1; }
+
+  .gridSection {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+}
